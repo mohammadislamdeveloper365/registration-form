@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="txt-center center-aligned">Registration Form</h1>
+    <p class="txt-center center-aligned">Please fill out this form with the required information</p>
+    <form action="/" method="GET" class="registration-form">
+        <fieldset class="fieldset-registraion">
+            <label for="first-name" class="form-label">Enter Your First Name: <input type="text" class='registration-form-input' name="first-name" id="first-name" required></label>
+            <label for="last-name" class="form-label">Enter Your Last Name: <input type="text"  class='registration-form-input' name="last-name" id="last-name" required></label>
+            <label for="email" class="form-label">Enter Your Email: <input id="email" type="email" class='registration-form-input' name="email" required></label>
+            <label for="password" class="form-label">Create a New Password: <input id="password" class='registration-form-input' name="password" type="password" pattern="[a-z0-9]{8,}" required ></label>
+        </fieldset>
+        <fieldset class="fieldset-registraion">
+            <legend>Account type (required)</legend>
+            <label class="form-label" for="personal-account">
+                <input type="radio" class="registration-form-inline registration-form-input" name="account-type" id="personal-account" checked>
+                Personal
+            </label>
+            <label for="business-account" class="form-label">
+                <input type="radio" name="account-type" class="registration-form-inline registration-form-input" id="business-account">
+                Business
+            </label>
+        </fieldset>
+        <fieldset class="fieldset-registraion">
+            <label for="profile-picture" class="form-label">
+                Upload a profile picture:
+                <input type="file" class='registration-form-input' name="profile-picture" id="profile-picture">
+            </label>
+            <label for="age" class="form-label">
+                Input your age (years):
+                <input type="number" class='registration-form-input' name="age" id="age" min="13" max="120">
+            </label>
+            <label for="referrer">
+                How did you hear about us?
+                <select name="referrer" id="referrer">
+                    <option value="">(select one)</option>
+                    <option value="1">freeCodeCamp News</option>
+                    <option value="2">freeCodeCamp YouTube Channel</option>
+                    <option value="3">freeCodeCamp Forum</option>
+                    <option value="4">Other</option>
+                </select>
+            </label>
+            <label for="bio">
+                Provide a bio:
+                <textarea class='registration-form-input' name="bio" id="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+            </label>
+        </fieldset>
+        <label for="terms-and-conditions" class="form-label">
+            <input type="checkbox" class='registration-form-input registration-form-inline' id="terms-and-conditions" name="terms-and-conditions" required>
+            I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
